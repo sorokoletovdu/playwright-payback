@@ -1,0 +1,22 @@
+{
+  "name": "playwright-payback",
+  "version": "1.0.0",
+  "description": "Example of UI test automation using Playwright test framework.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorokoletovdu/playwright-payback.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sorokoletovdu/playwright-payback/issues"
+  },
+  "homepage": "https://github.com/sorokoletovdu/playwright-payback#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.25.1",
+    "allure-playwright": "^2.0.0-beta.19"
+  }
+}
