@@ -17,6 +17,12 @@
   "homepage": "https://github.com/sorokoletovdu/playwright-payback#readme",
   "devDependencies": {
     "@playwright/test": "^1.25.1",
-    "allure-playwright": "^2.0.0-beta.19"
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "allure-playwright": "^2.0.0-beta.19",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "@types/prettier": "^2.7.0"
   }
 }
