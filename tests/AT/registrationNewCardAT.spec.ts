@@ -6,8 +6,6 @@ import {
   generateRandomAlphaString,
   generateRandomDate,
 } from '../helpers/random';
-// import { HomePageAT } from '../pages/AT/homePageAT';
-// import { RegistrationPage } from '../pages/registrationPage';
 
 test.use({ baseURL: 'https://www.payback.at' });
 
