@@ -65,6 +65,10 @@ export class RegistrationPage extends BasePage {
     return this.page.locator(`[data-step="${step}"] .js__sign-up-edit-btn`);
   }
 
+  getLocatorForErrorFieldMessage(step: number) {
+    return this.page.locator(`[data-step="${step}"] .pb-input_invalid`);
+  }
+
   async selectGender(gender: string) {
     const genderId = gender === 'Male' ? '2' : '1';
     await this.stepThreeSalutation.selectOption(genderId);
@@ -94,8 +98,12 @@ export class RegistrationPage extends BasePage {
   }
 
   async fillInStepTwo(email: string, pin: string) {
+    const error = this.getLocatorForErrorFieldMessage(2);
+    const header = this.getLocatorForStepHeader(2);
     await this.stepTwoEmail.fill(email);
     await this.stepTwoPin.fill(pin);
+    await header.click();
+    await expect(error).toBeHidden();
     const continueButton = this.getLocatorForStepSubmitButton(2);
     await continueButton.click();
   }
@@ -111,6 +119,8 @@ export class RegistrationPage extends BasePage {
     zip: string,
     city: string,
   ) {
+    const error = this.getLocatorForErrorFieldMessage(3);
+    const header = this.getLocatorForStepHeader(3);
     await this.selectGender('Male');
     await this.stepThreeFirstName.fill(firstName);
     await this.stepThreeLastName.fill(lastName);
@@ -122,6 +132,8 @@ export class RegistrationPage extends BasePage {
     await this.stepThreeStreetLineTwo.fill(addressLineTwo);
     await this.stepThreeZip.fill(zip);
     await this.stepThreeCity.fill(city);
+    await header.click();
+    await expect(error).toBeHidden();
     const continueButton = this.getLocatorForStepSubmitButton(3);
     await continueButton.click();
   }

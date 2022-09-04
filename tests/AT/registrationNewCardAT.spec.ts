@@ -23,6 +23,7 @@ test.describe('Positive registration scenario for AT', () => {
     const email = generateRandomEmail();
     const pin = generateRandomNumericString(4);
     await registrationPage.fillInStepTwo(email, pin);
+
     const firstName = generateRandomAlphaString(5);
     const lastName = generateRandomAlphaString(7);
     const dob = generateRandomDate();
