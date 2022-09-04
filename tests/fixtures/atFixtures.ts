@@ -1,10 +1,10 @@
 import { test as baseTest } from '@playwright/test';
 import { HomePageAT } from '../pages/AT/homePageAT';
-import { RegistrationPage } from '../pages/registrationPage';
+import { RegistrationPageAT } from '../pages/AT/registrationPageAT';
 
 type ATFixtures = {
   homePage: HomePageAT;
-  registrationPage: RegistrationPage;
+  registrationPage: RegistrationPageAT;
 };
 
 export const test = baseTest.extend<ATFixtures>({
@@ -16,7 +16,7 @@ export const test = baseTest.extend<ATFixtures>({
     await use(homePage);
   },
   registrationPage: async ({ page }, use) => {
-    const registrationPage = new RegistrationPage(page);
+    const registrationPage = new RegistrationPageAT(page);
     await use(registrationPage);
   },
 });

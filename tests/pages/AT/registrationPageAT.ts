@@ -1,7 +1,7 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { BasePage } from './basePage';
+import { BasePage } from '../basePage';
 
-export class RegistrationPage extends BasePage {
+export class RegistrationPageAT extends BasePage {
   readonly stepOneExistingCardRB: Locator;
   readonly stepOneCardNumber: Locator;
   readonly stepOneCVC: Locator;

@@ -11,35 +11,33 @@ export class HomePageAT extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    (this.loginHeader = page.locator('.pb-login_nav>div>h2')),
-      (this.loginSubtitle = page.locator(
-        '.pb-login__content > p:nth-child(3)',
-      )),
-      (this.cardOrEmail = page.locator('[name="alias"]')),
-      (this.password = page.locator('[name="secret"]')),
-      (this.submitButton = page.locator('[name="login-button-1382"]')),
-      (this.menuItems = {
-        inform: {
-          item: 1,
-          secondLevel: {
-            collectPoints: 1,
-            redeemPoints: 2,
-            application: 3,
-          },
+    this.loginHeader = page.locator('.pb-login_nav>div>h2');
+    this.loginSubtitle = page.locator('.pb-login__content > p:nth-child(3)');
+    this.cardOrEmail = page.locator('[name="alias"]');
+    this.password = page.locator('[name="secret"]');
+    this.submitButton = page.locator('[name="login-button-1382"]');
+    this.menuItems = {
+      inform: {
+        item: 1,
+        secondLevel: {
+          collectPoints: 1,
+          redeemPoints: 2,
+          application: 3,
         },
-        partner: {
-          item: 2,
-        },
-        scoreOnline: {
-          item: 3,
-        },
-        coupons: {
-          item: 4,
-        },
-        bonuses: {
-          item: 5,
-        },
-      });
+      },
+      partner: {
+        item: 2,
+      },
+      scoreOnline: {
+        item: 3,
+      },
+      coupons: {
+        item: 4,
+      },
+      bonuses: {
+        item: 5,
+      },
+    };
   }
 
   async login(cardOrEmail: string, password: string) {
