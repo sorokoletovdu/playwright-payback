@@ -35,7 +35,7 @@ export function generateRandomString(length: number) {
 }
 
 export function generateRandomDate() {
-  const randomDay = generateRandomNumber(1, 31).toString();
+  const randomDay = generateRandomNumber(1, 28).toString();
   const randomMonth = generateRandomNumber(1, 12).toString();
   const year = generateRandomNumber(1990, 2022).toString();
   const day = randomDay.length !== 2 ? `0${randomDay}` : randomDay;
